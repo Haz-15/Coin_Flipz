@@ -9,9 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var changingImage: UIImageView!
+    
+    var imageList =  [#imageLiteral(resourceName: "Heads-1"),#imageLiteral(resourceName: "Tails-1")]
+    
+    
+    
+    @IBAction func Click(_ sender: UIButton) {
+        var randomPosition = Int.random(in: 0...1)
+        
+        
+        changingImage.image = imageList[randomPosition]
+    
+    
     }
 
 
